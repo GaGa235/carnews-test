@@ -1,0 +1,69 @@
+#application: icamping-prod
+application: carnews-test
+version: 1
+runtime: python27
+threadsafe: true
+api_version: 1
+
+handlers:
+
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /imgs
+  static_dir: imgs
+
+
+#- url: /egg/
+#  static_files: egg_web/app/index.html
+#  upload: egg_web/app/index.html 
+### GAE backend web ###
+- url: .*
+  script: main.application
+
+libraries:
+- name: jinja2
+  version: latest
+
+
+### Deploy ###
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*\.md$
+- ^(.*/)?.*\.scss$
+- ^(.*/)?boss_web/app/lib/*.md
+- ^(.*/)?node_modules/.*  # egg_web, boss_web
+- ^(.*/)?tool/out/.*
+- ^(.*/)?.git/.*
+
+- ^(.*/)?.*\CODENAMES$
+- ^(.*/)?.*\LICENSE$
+- ^(.*/)?.*\TODO*$
+- ^(.*/)?.*\.gitignore$
+- ^(.*/)?.*\.jshintrc$
+- ^(.*/)?.*\.editorconfig$
+- ^(.*/)?.*\.bower*$
+
+#- ^(.*/)?.*\map*$
+- ^(.*/)?.*\.bowerrc*$
+- ^(.*/)?.*\gzip*$
+- ^(.*/)?.*\yml*$
+
+
+### Reference ###
+# https://github.com/fredsa/appengine-angular-seed-python/blob/master/app.yaml
+#handlers:
+#- url: (.*)/
+#  static_files: app\1/index.html
+#  upload: app
+#
+#- url: (.*)
+#  static_files: app\1
+#  upload: app
+
+
