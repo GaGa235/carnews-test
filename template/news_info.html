@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Goo 車訊網</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery.js"></script>
+<script src="../js/superfish.js"></script>
+<script type="text/javascript" src="../js/jquery.jgd.dropdown.min.js"></script>
+<script type="text/javascript">
+    jQuery("document").ready(function($){
+        var nav = $('#page_list_title');
+        
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1730) {
+                nav.addClass("f-nav");
+            } else {
+                nav.removeClass("f-nav");
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+    	<div class="headerwd clearfix">
+            <div class="logo"><img src="../imgs/logo/logo_new.png" border="0"></div>
+            <div class="login">
+                <a href="#" class="btn_login"></a>
+                <a href="#" class="btn_fb_login"></a>
+            </div>
+            <div class="search">
+            <div id="select_search" class="clearfix">
+                <select id="select" class="search_select">
+                    <option selected> 全站搜尋 </option>
+                        <option>新車搜尋</option>
+                        <option>圖片搜尋</option>
+                        <option>影片搜尋</option>
+                        <option>試車搜尋</option>
+                        <option>改裝搜尋</option>
+                </select>
+                <input type="text" class="search_txt" value="">
+                <input type="button" class="search_input" value="送出">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_block clearfix">
+    	<div class="cont_left">
+        	<ol>
+                <li>
+                    <a href="/"><span class="menu_icon icon_index"></span> <span class="menu_txt txt_index">回首頁</span></a>
+                </li>
+                <li>
+                    <a href="/news"><span class="menu_icon icon_new"></span> <span class="menu_txt txt_new">GOO新車</span></a>
+                    <ul>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">頭條</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">熱門點閱</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">新車速報</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">促銷</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">賽車</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">汽車百貨</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">俱樂部</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">時尚生活</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">專題企畫</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">二手車</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">機車特區</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/refit"><span class="menu_icon icon_transform"></span> <span class="menu_txt txt_transform">GOO改裝</span></a>
+                </li>
+                <li>
+                    <a href="/pic"><span class="menu_icon icon_pic"></span> <span class="menu_txt txt_pic">GOO圖庫</span></a>
+                </li>
+                <li>
+                    <a href="/movie"><span class="menu_icon icon_movie"></span> <span class="menu_txt txt_movie">GOO影音</span></a>
+                    <ul class="sub_sidemenu">
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">新車發表</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">試駕/賽車</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">廣 告</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">車 展 </span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="menu_icon icon_discuss"></span> <span class="menu_txt txt_discuss">GOO討論</span></a>
+                </li>
+                <li>
+                    <a href="/option"><span class="menu_icon icon_play"></span> <span class="menu_txt txt_play">OPTION盃</span></a>
+                    <ul class="sub_sidemenu">
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">頭條新聞</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">比賽結果</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">年度賽程</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">售票資訊</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">參賽陣容</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">影音圖庫</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">OP盃源起</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">贊助廠商</span></a></li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="menu_ad">
+       	    	<a href="#"><img src="../imgs/ad/ad1_44.jpg" border="0"></a>
+            </div>
+        </div>
+    	<div class="cont_right">
+            <p class="text_title">
+            	<a href="#">文字三頭標之1</a>
+            	<a href="#">文字三頭標之2</a>
+            	<a href="#">文字三頭標之3</a>
+            </p>
+            <div class="clearfix">
+            	<div class="R_left">
+                	<div class="ad_info clearfix">
+                        <div class="band_title">
+                            <span class="new_cart">造型黏TT Audi Next A4*</span>
+                        </div>
+                        <p class="data_time">2014-12-29</p>
+                        <div class="news_icon clearfix">
+                        	<span class="float_left">
+                                <a class="icon-shar icon-f" href="#"></a>
+                                <a class="icon-shar icon-t" href="#"></a>
+                                <a class="icon-shar icon-g" href="#"></a>
+                                <a class="icon-shar icon-s" href="#"></a>
+                                <a class="icon-shar icon-r" href="#"></a>
+                            </span>
+                            <span class="float_right">
+                                <a class="icon-shar icon-tt" href="#"></a>
+                                <a class="icon-shar icon-TT" href="#"></a>
+                            </span>
+                        </div>
+                        <div class="ad_info_banner">
+                            <img src="../imgs/ad/news_07.jpg" width="660" border="0">
+                        </div>
+                        <div class="cart_info_txt">
+                            ※ 銳利頭燈造型和全LED燈組
+							<br>※ 更寬廣的車內空間
+							<br>※ Plug-in Hybrid動力加入
+							<br>※ 國外上市日期 2015年Q2
+							<br>看著新一代A4在路上奔跑就彷彿有種見到進化到極致的掠食者一樣，就如同豪華品牌的房車進化腳步一般，最早A4家族的前身F103就像是嬌小不起眼的始祖鳥，然而Audi最早生產的這款Compact Sedan才真的算小型，與膨脹的油價互相矛盾的體型成長幅度，讓接下來的F103世代60、72、75、80和Super 90演化到B1 80甚至到B4世代已經來到將近4.6公尺的車長，到了現階段的A4更來到破4.7公尺的中型尺碼，同時美美的外型也不偏不倚地正中消費者下懷，老字號的四環商標在新的設計和科技下好像變得更耀眼，代表著Auto Union時期合併的四大德國汽車廠，以及1969年湊進來的NSU Motorenwerke AG等五味愈陳愈香，只要不要變成五味俱全的五環標誌再加上黑心貨，Audi在台灣人的心目中就能夠以永遠巍巍而立。        
+                        </div>
+                        <div class="cart_info_txt">
+                            <div id="fb-root"></div>
+                            <script>(function(d, s, id) {
+                              var js, fjs = d.getElementsByTagName(s)[0];
+                              if (d.getElementById(id)) return;
+                              js = d.createElement(s); js.id = id;
+                              js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.0";
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+                            <div class="fb-comments" data-href="https://www.facebook.com/pages/%E8%BB%8A%E8%A8%8A%E7%B6%B2/130975221547" data-numposts="5" data-colorscheme="light"></div>
+                    	</div>
+                    </div> 
+                    <div class="ad_sblock clearfix">
+                    	<h1>其他相關文章</h1>
+                        <ol>
+                        	<li><a href="#"><img src="../imgs/ad/news_11.jpg" border="0"><p class="info_txt">向RS經典傳奇致敬四環品牌Audi高性能跑旅車系鋒芒再現</p></a></li>
+                        	<li><a href="#"><img src="../imgs/ad/news_11.jpg" border="0"><p class="info_txt">向RS經典傳奇致敬四環品牌Audi高性能跑旅車系鋒芒再現</p></a></li>
+                        	<li><a href="#"><img src="../imgs/ad/news_11.jpg" border="0"><p class="info_txt">向RS經典傳奇致敬四環品牌Audi高性能跑旅車系鋒芒再現</p></a></li>
+                        	<li class="end"><a href="#"><img src="../imgs/ad/news_11.jpg" border="0"><p class="info_txt">向RS經典傳奇致敬四環品牌Audi高性能跑旅車系鋒芒再現</p></a></li>
+                        </ol>
+                    </div>
+                    <div class="ad_sblock clearfix">
+                    	<h1>相關二手車物件</h1>
+                        <ol>
+                        	<li><a href="#"><img src="../imgs/ad/news_11.jpg" border="0"><p class="info_txt">INFINITI FX  FX 35</p><p class="cart_price">77.8萬</p></a></li>
+                        	<li><a href="#"><img src="../imgs/ad/news_11.jpg" border="0"><p class="info_txt">INFINITI FX  FX 35</p><p class="cart_price">77.8萬</p></a></li>
+                        	<li><a href="#"><img src="../imgs/ad/news_11.jpg" border="0"><p class="info_txt">INFINITI FX  FX 35</p><p class="cart_price">77.8萬</p></a></li>
+                        	<li class="end"><a href="#"><img src="../imgs/ad/news_11.jpg" border="0"><p class="info_txt">INFINITI FX  FX 35</p><p class="cart_price">77.8萬</p></a></li>
+                        </ol>
+                    </div>
+                    <div class="list_block">
+                    	<div class="title" id="page_list_title">
+                            <span class="mrxl">ALL</span>
+                            <span class="mrxl">試車</span>
+                            <span class="mrxl">改裝</span>
+                            <span class="mrxl">新車</span>
+                            <span class="mrxl">新聞</span>
+                            <span class="mrxl">改裝新品</span>
+                            <span class="mrxl">more</span>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contant_big">
+                        	<div class="list_row">
+                                <div class="text_info">
+                               	  <h1>Mercedes-Benz Taiwan 車款展示</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                                <img src="../imgs/ad/list2_107.jpg" border="0"> 
+                            </div>
+                        </div>
+                    	<div class="contant ad">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list3_112.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contant_big">
+                       	  <div class="list_row">
+                            <div class="text_info">
+                               	  <h1>Mercedes-Benz Taiwan 車款展示</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                            </div>
+                              <img src="../imgs/ad/list4_115.jpg" border="0"> 
+                          </div>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad_block"><a href="#"><img src="../imgs/ad/list5_119.jpg" width="652" height="90"></a></div>
+                    <div class="list_block">
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            	<div class="R_right">
+                	<div class="R_ad"><img src="../imgs/ad/ad3_32.jpg" border="0"></div>
+                    <div class="R_block">
+                      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2F%25E8%25BB%258A%25E8%25A8%258A%25E7%25B6%25B2%2F130975221547&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:290px;" allowTransparency="true"></iframe>                    
+                  	</div>  
+                    <div class="R_ad"><img src="../imgs/ad/ad4_113.jpg" border="0"></div>
+                    <div class="R_ad"><img src="../imgs/ad/ad5_120.jpg" border="0"></div>
+                    <div class="R_block">
+                    	<div class="title">
+                          <h1>熱門點選</h1>
+                            <p>Hot Tap</p>
+       		  			</div>
+          				<div class="content ranking">
+                        	<ol>
+                            	<li><a href="#">頭款19.9萬元入主全新MINI One Countr...</a></li>
+                            	<li><a href="#">HINO商用車冬季感恩回饋活動..</a></li>
+                            	<li><a href="#">Mercedes-Benz「養車之道、保養有術」.....</a></li>
+                            	<li><a href="#">Honda Care冬暖了健檢活動開跑..</a></li>
+                            	<li><a href="#">Vespa Care 迎新健檢新年禮讚12月15日...</a></li>
+                            </ol>
+                        </div>
+                    </div> 
+                    <div class="R_block">
+                    	<div class="title">
+                          <h1>相關二手車行情</h1>
+                            <p>Used car prices</p>
+       		  			</div>
+          				<div class="content ranking">
+                        	<ol>
+                            	<li><span>無限 INFINITI FX 系列 FX 35</span><span class="car_num">77.8萬</span></li>
+                            	<li><span>無限 INFINITI FX 系列 FX 35</span><span class="car_num">77.8萬</span></li>
+                            	<li><span>無限 INFINITI FX 系列 FX 35</span><span class="car_num">77.8萬</span></li>
+                            	<li><span>無限 INFINITI FX 系列 FX 35</span><span class="car_num">77.8萬</span></li>
+                            	<li><span>無限 INFINITI FX 系列 FX 35</span><span class="car_num">77.8萬</span></li>
+                            	<li><span>無限 INFINITI FX 系列 FX 35</span><span class="car_num">77.8萬</span></li>
+                            </ol>
+                        </div>
+                    </div> 
+                    <div class="R_block">
+                    	<div class="title">
+                          <h1>相關圖片</h1>
+                            <p>Picture</p>
+       		  			</div>
+          				<div class="content">
+                        	<ol class="picture_other clearfix">
+                            	<li><img src="../imgs/ad/news_15.jpg" border="0"></li>
+                            	<li><img src="../imgs/ad/news_17.jpg" border="0"></li>
+                            	<li><img src="../imgs/ad/news_15.jpg" border="0"></li>
+                            	<li><img src="../imgs/ad/news_21.jpg" border="0"></li>
+                            	<li><img src="../imgs/ad/news_32.jpg" border="0"></li>
+                            	<li><img src="../imgs/ad/news_30.jpg" border="0"></li>
+                            	<li><img src="../imgs/ad/news_31.jpg" border="0"></li>
+                            	<li><img src="../imgs/ad/news_28.jpg" border="0"></li>
+                            </ol>
+                        </div>
+                    </div> 
+
+                	<div class="R_ad icon_share">
+                    	<a href="#"><img src="../imgs/fb_icon_123.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/g_icon_123_125.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/3_icon_127.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/carma_icon_129.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/in_icon_131.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/wifi_icon_133.png" border="0"></a>
+                    </div>
+                    <div class="footer">
+                        © Copyright 2015 - www.carnews.com - All rights reserved
+                        <br>台灣寶路多股份有限公司所有資料未經許可不得轉載  
+                    </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>

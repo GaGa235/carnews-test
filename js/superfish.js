@@ -135,7 +135,7 @@ $(function(){
     $("ul.squarewhite > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
 });
 
-$(document).ready(function(){$('#demo-07').jCarouselLite({btnPrev:'#prev-07',btnNext:'#next-07'});});
+// $(document).ready(function(){$('#demo-07').jCarouselLite({btnPrev:'#prev-07',btnNext:'#next-07'});});
 
 	$(function(){
 		// 幫 a.abgne_gotoheader 加上 click 事件
@@ -162,40 +162,40 @@ $(document).ready(function(){$('#demo-07').jCarouselLite({btnPrev:'#prev-07',btn
 			});
 		});
 	});
-$(document).ready(function(){
-	$("#slider2").Xslider({
-		// 默认配置
-		affect: 'scrollx', //效果  有scrollx|scrolly|fade|none
-		speed: 500, //动画速度
-		space: 6000, //时间间隔
-		auto: false, //自动滚动
-		trigger: 'mouseover', //触发事件 注意用mouseover代替hover
-		conbox: '.conbox', //内容容器id或class
-		ctag: 'div', //内容标签 默认为<a>
-		switcher: '.switcher', //切换触发器id或class
-		stag: 'a', //切换器标签 默认为a
-		current:'cur', //当前切换器样式名称
-		rand:false //是否随机指定默认幻灯图片
-	});						   
-});
-$(document).ready(function(){
-	$("#slider1").Xslider({
-		// 默认配置
-		affect: 'scrollx', //效果  有scrollx|scrolly|fade|none
-		speed: 500, //动画速度
-		space: 6000, //时间间隔
-		auto: false, //自动滚动
-		trigger: 'mouseover', //触发事件 注意用mouseover代替hover
-		conbox: '.conbox', //内容容器id或class
-		ctag: 'div', //内容标签 默认为<a>
-		switcher: '.switcher', //切换触发器id或class
-		stag: 'a', //切换器标签 默认为a
-		current:'cur', //当前切换器样式名称
-		rand:false //是否随机指定默认幻灯图片
-	});						   
-});
-    $("ul.squarewhite > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
-	$(document).ready(function(){$('#demo-07').jCarouselLite({btnPrev:'#prev-07',btnNext:'#next-07'});});
+// $(document).ready(function(){
+// 	$("#slider2").Xslider({
+// 		// 默认配置
+// 		affect: 'scrollx', //效果  有scrollx|scrolly|fade|none
+// 		speed: 500, //动画速度
+// 		space: 6000, //时间间隔
+// 		auto: false, //自动滚动
+// 		trigger: 'mouseover', //触发事件 注意用mouseover代替hover
+// 		conbox: '.conbox', //内容容器id或class
+// 		ctag: 'div', //内容标签 默认为<a>
+// 		switcher: '.switcher', //切换触发器id或class
+// 		stag: 'a', //切换器标签 默认为a
+// 		current:'cur', //当前切换器样式名称
+// 		rand:false //是否随机指定默认幻灯图片
+// 	});						   
+// });
+// $(document).ready(function(){
+// 	$("#slider1").Xslider({
+// 		// 默认配置
+// 		affect: 'scrollx', //效果  有scrollx|scrolly|fade|none
+// 		speed: 500, //动画速度
+// 		space: 6000, //时间间隔
+// 		auto: false, //自动滚动
+// 		trigger: 'mouseover', //触发事件 注意用mouseover代替hover
+// 		conbox: '.conbox', //内容容器id或class
+// 		ctag: 'div', //内容标签 默认为<a>
+// 		switcher: '.switcher', //切换触发器id或class
+// 		stag: 'a', //切换器标签 默认为a
+// 		current:'cur', //当前切换器样式名称
+// 		rand:false //是否随机指定默认幻灯图片
+// 	});						   
+// });
+ //    $("ul.squarewhite > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+	// $(document).ready(function(){$('#demo-07').jCarouselLite({btnPrev:'#prev-07',btnNext:'#next-07'});});
  
  ///////////////////////////////////////////////////////////////////////////////////////////
  //year

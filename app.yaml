@@ -16,6 +16,9 @@ handlers:
 - url: /imgs
   static_dir: imgs
 
+- url: /source
+  static_dir: source
+
 
 #- url: /egg/
 #  static_files: egg_web/app/index.html

@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Goo 車訊網</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery.js"></script>
+<script src="../js/superfish.js"></script>
+<script type="text/javascript" src="../js/jquery.jgd.dropdown.min.js"></script>
+<script type="text/javascript">
+    jQuery("document").ready(function($){
+        var nav = $('#page_list_title');
+        
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 830) {
+                nav.addClass("f-nav");
+            } else {
+                nav.removeClass("f-nav");
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+    	<div class="headerwd clearfix">
+            <div class="logo"><img src="../imgs/logo/logo_refit.png" border="0"></div>
+            <div class="login">
+                <a href="#" class="btn_login"></a>
+                <a href="#" class="btn_fb_login"></a>
+            </div>
+            <div class="search">
+            <div id="select_search" class="clearfix">
+                <select id="select" class="search_select">
+                    <option selected> 全站搜尋 </option>
+                        <option>新車搜尋</option>
+                        <option>圖片搜尋</option>
+                        <option>影片搜尋</option>
+                        <option>試車搜尋</option>
+                        <option>改裝搜尋</option>
+                </select>
+                <input type="text" class="search_txt" value="">
+                <input type="button" class="search_input" value="送出">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_block clearfix">
+    	<div class="cont_left">
+        	<ol>
+                <li><a href="/"><span class="menu_icon icon_index"></span> <span class="menu_txt txt_index">回首頁</span></a></li>
+                <li><a href="/news"><span class="menu_icon icon_new"></span> <span class="menu_txt txt_new">GOO新車</span></a></li>
+                <li><a href="/refit"><span class="menu_icon icon_transform"></span> <span class="menu_txt txt_transform">GOO改裝</span></a></li>
+                <li><a href="/pic"><span class="menu_icon icon_pic"></span> <span class="menu_txt txt_pic">GOO圖庫</span></a></li>
+                <li><a href="/movie"><span class="menu_icon icon_movie"></span> <span class="menu_txt txt_movie">GOO影音</span></a></li>
+                <li><a href="#"><span class="menu_icon icon_discuss"></span> <span class="menu_txt txt_discuss">GOO討論</span></a></li>
+                <li><a href="/option"><span class="menu_icon icon_play"></span> <span class="menu_txt txt_play">OPTION盃</span></a></li>
+            </ol>
+            <div class="menu_ad">
+       	    	<a href="#"><img src="../imgs/ad/ad1_44.jpg" border="0"></a>
+            </div>
+        </div>
+    	<div class="cont_right">
+            <p class="text_title">
+            	<a href="#">文字三頭標之1</a>
+            	<a href="#">文字三頭標之2</a>
+            	<a href="#">文字三頭標之3</a>
+            </p>
+            <div class="clearfix">
+            	<div class="R_left">
+                	<div class="ad_info clearfix">
+                        <div class="row">
+    			     		<div class="ad_info_imgb">
+                            	<img src="../imgs/ad/refit1_03.jpg" width="442" border="0">
+                            	<p>Mercedes-Benz Taiwan 車款展示</p>
+                            </div>
+                            <div class="ad_info_right">
+                                <div class="ad_info_imgs">
+                                    <img src="../imgs/ad/refit2_05.jpg" width="218" height="174" border="0">
+                                    <p>對於汽車的「熱情」，讓..</p>
+                                </div>
+                                <div class="ad_info_imgs">
+                                    <img src="../imgs/ad/refit3_08.jpg" width="218" height="174" border="0">
+                                    <p>對於汽車的「熱情」，讓..</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+            				<div class="ad_info_botm clearfix">
+                                <div class="ad_info_imgs">
+                                    <img src="../imgs/ad/refit4_10.jpg" width="219" height="177" border="0">
+                                    <p>對於汽車的「熱情」，讓..</p>
+                                </div>
+                                <div class="ad_info_imgs">
+                                    <img src="../imgs/ad/refit5_12.jpg" width="218" height="177" border="0">
+                                    <p>對於汽車的「熱情」，讓..</p>
+                                </div>
+                                <div class="ad_info_imgs">
+                                    <img src="../imgs/ad/refit6_13.jpg" width="219" height="177" border="0">
+                                    <p>對於汽車的「熱情」，讓..</p>
+                                </div>
+                            </div>
+                        </div>
+                   	</div>
+                    <div class="contant_big ad maspace">
+                        <div class="list_row_ad">
+                            <img src="../imgs/ad/refit7_17.jpg" border="0"> 
+                            <div class="text_info">
+                              <h1>Mercedes-Benz Taiwan 車款展示</h1>
+                              <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="list_block">
+                        <div class="title" id="page_list_title">
+                            <span class="mrxl">ALL</span>
+                            <span class="mrxl">試車</span>
+                            <span class="mrxl">改裝</span>
+                            <span class="mrxl">新車</span>
+                            <span class="mrxl">新聞</span>
+                            <span class="mrxl">改裝新品</span>
+                            <span class="mrxl">more</span>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list6_03.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contant_big">
+                        	<div class="list_row">
+                                <div class="text_info">
+                               	  <h1>Mercedes-Benz Taiwan 車款展示</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                                <img src="../imgs/ad/list2_107.jpg" border="0"> 
+                            </div>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                    	<div class="contant">
+                        	<div class="list_row">
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
+                                <div class="text_info">
+                               	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contant_big">
+                       	  <div class="list_row">
+                            <div class="text_info">
+                               	  <h1>Mercedes-Benz Taiwan 車款展示</h1>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
+                            </div>
+                              <img src="../imgs/ad/list4_115.jpg" border="0"> 
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            	<div class="R_right">
+                	<div class="R_ad"><img src="../imgs/ad/ad4_113.jpg" border="0"></div>
+                    <div class="R_block">
+                      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2F%25E8%25BB%258A%25E8%25A8%258A%25E7%25B6%25B2%2F130975221547&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:290px;" allowTransparency="true"></iframe>                    
+                  	</div> 
+                	<div class="R_ad"><img src="../imgs/ad/ad7_01.jpg" border="0"></div>
+                	<div class="R_ad"><img src="../imgs/ad/ad5_120.jpg" border="0"></div>
+                	<div class="R_ad"><img src="../imgs/ad/ad7_01.jpg" border="0"></div>
+                	<div class="R_ad"><img src="../imgs/ad/ad5_120.jpg" border="0"></div>
+                	<div class="R_ad"><img src="../imgs/ad/ad7_01.jpg" border="0"></div>
+                	<div class="R_ad"><img src="../imgs/ad/ad3_32.jpg" border="0"></div>
+                	<div class="R_ad"><img src="../imgs/ad/ad3_32.jpg" border="0"></div>
+                	<div class="R_ad icon_share">
+                    	<a href="#"><img src="../imgs/fb_icon_123.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/g_icon_123_125.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/3_icon_127.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/carma_icon_129.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/in_icon_131.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/wifi_icon_133.png" border="0"></a>
+                    </div>
+                    <div class="footer">
+                        © Copyright 2015 - www.carnews.com - All rights reserved
+                        <br>台灣寶路多股份有限公司所有資料未經許可不得轉載  
+                    </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Goo 車訊網</title>
-<link href="/css/style.css" rel="stylesheet" type="text/css">
-<script src="/js/jquery.js"></script>
-<script src="/js/superfish.js"></script>
-<script type="text/javascript" src="/js/jquery.jgd.dropdown.min.js"></script>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery.js"></script>
+<script src="../js/superfish.js"></script>
+<script type="text/javascript" src="../js/jquery.jgd.dropdown.min.js"></script>
 <script type="text/javascript">
     jQuery("document").ready(function($){
-        var nav = $('#news_list_title');
+        var nav = $('#page_list_title');
         
         $(window).scroll(function () {
             if ($(this).scrollTop() > 430) {
@@ -26,7 +26,7 @@
 <div class="container">
 	<div class="header">
     	<div class="headerwd clearfix">
-            <div class="logo"><img src="/imgs/logo_03.png" border="0"></div>
+            <div class="logo"><img src="../imgs/logo/logo_new.png" border="0"></div>
             <div class="login">
                 <a href="#" class="btn_login"></a>
                 <a href="#" class="btn_fb_login"></a>
@@ -34,10 +34,12 @@
             <div class="search">
             <div id="select_search" class="clearfix">
                 <select id="select" class="search_select">
-                    <option selected> 改裝搜尋 </option>
+                    <option selected> 全站搜尋 </option>
                         <option>新車搜尋</option>
                         <option>圖片搜尋</option>
                         <option>影片搜尋</option>
+                        <option>試車搜尋</option>
+                        <option>改裝搜尋</option>
                 </select>
                 <input type="text" class="search_txt" value="">
                 <input type="button" class="search_input" value="送出">
@@ -48,16 +50,59 @@
     <div class="container_block clearfix">
     	<div class="cont_left">
         	<ol>
-                <li><span class="menu_icon icon_new"></span> <span class="menu_txt txt_new">GOGO新車</span></li>
-                <li><span class="menu_icon icon_transform"></span> <span class="menu_txt txt_transform">GOGO改裝</span></li>
-                <li><span class="menu_icon icon_pic"></span> <span class="menu_txt txt_pic">GOGO圖庫</span></li>
-                <li><span class="menu_icon icon_movie"></span> <span class="menu_txt txt_movie">GOGO影音</span></li>
-                <li><span class="menu_icon icon_discuss"></span> <span class="menu_txt txt_discuss">GOGO討論</span></li>
-                <li><span class="menu_icon icon_play"></span> <span class="menu_txt txt_play">OPTION盃</span></li>
-                <li><a href="index.html"><span class="menu_icon icon_index"></span> <span class="menu_txt txt_index">回首頁</span></a></li>
+                <li>
+                    <a href="/"><span class="menu_icon icon_index"></span> <span class="menu_txt txt_index">回首頁</span></a>
+                </li>
+                <li>
+                    <a href="/news"><span class="menu_icon icon_new"></span> <span class="menu_txt txt_new">GOO新車</span></a>
+                    <ul>
+                        <li ><a href="#" class="menu_txt_sub txt_play_sub active">頭條</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">熱門點閱</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">新車速報</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">促銷</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">賽車</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">汽車百貨</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">俱樂部</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">時尚生活</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">專題企畫</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">二手車</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">機車特區</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/refit"><span class="menu_icon icon_transform"></span> <span class="menu_txt txt_transform">GOO改裝</span></a>
+                </li>
+                <li>
+                    <a href="/pic"><span class="menu_icon icon_pic"></span> <span class="menu_txt txt_pic">GOO圖庫</span></a>
+                </li>
+                <li>
+                    <a href="/movie"><span class="menu_icon icon_movie"></span> <span class="menu_txt txt_movie">GOO影音</span></a>
+                    <ul class="sub_sidemenu">
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">新車發表</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">試駕/賽車</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">廣 告</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">車 展 </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="menu_icon icon_discuss"></span> <span class="menu_txt txt_discuss">GOO討論</span></a>
+                </li>
+                <li>
+                    <a href="/option"><span class="menu_icon icon_play"></span> <span class="menu_txt txt_play">OPTION盃</span></a>
+                    <ul class="sub_sidemenu">
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">頭條新聞</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">比賽結果</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">年度賽程</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">售票資訊</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">參賽陣容</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">影音圖庫</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">OP盃源起</a></li>
+                        <li><a href="#" class="menu_txt_sub txt_play_sub">贊助廠商</a></li>
+                    </ul>
+                </li>
             </ol>
             <div class="menu_ad">
-       	    	<a href="#"><img src="/imgs/ad/ad1_44.jpg" border="0"></a>
+       	    	<a href="#"><img src="../imgs/ad/ad1_44.jpg" border="0"></a>
             </div>
         </div>
     	<div class="cont_right">
@@ -70,37 +115,45 @@
             	<div class="R_left">
                 	<div class="ad_info clearfix">
 			     		<div class="ad_info_imgb">
-                        	<img src="/imgs/ad/ad7_03.jpg" width="430" border="0">
+                        	<img src="../imgs/ad/ad7_03.jpg" width="440" height="347" border="0">
                         	<p>Mercedes-Benz Taiwan 車款展示</p>
                         </div>
                         <div class="ad_info_right">
                             <div class="ad_info_imgs">
-                                <img src="/imgs/ad/ad8_06.jpg" width="230" height="173" border="0">
+                                <img src="../imgs/ad/ad8_06.jpg" width="220" height="173" border="0">
                                 <p>對於汽車的「熱情」，讓..</p>
                             </div>
                             <div class="ad_info_imgs">
-                                <img src="/imgs/ad/ad9_08.jpg" width="230" height="173" border="0">
+                                <img src="../imgs/ad/ad9_08.jpg" width="220" height="173" border="0">
                                 <p>對於汽車的「熱情」，讓..</p>
                             </div>
                         </div>
                    	</div>
                     <div class="list_block">
-                    	<div class="title" id="news_list_title">ALL　　試車　　改裝　　新車　　新聞　　改裝新品　　more</div>
+                    	<div class="title" id="page_list_title">
+                           <a class="mrxl red-tab active">ALL</a>
+                            <a class="mrxl red-tab">試車</a>
+                            <a class="mrxl red-tab">改裝</a>
+                            <a class="mrxl red-tab">新車</a>
+                            <a class="mrxl red-tab">新聞</a>
+                            <a class="mrxl red-tab">改裝新品</a>
+                            <a class="mrxl red-tab">more</a>
+                        </div>
                     	<div class="contant">
                         	<div class="list_row">
-                            	<img src="/imgs/ad/list1_100.jpg" border="0"> 
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
                                 <div class="text_info">
                                	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
-                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="/imgs/next_icon_81.png" border="0"></p>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
                                 </div>
                             </div>
                         </div>
                     	<div class="contant">
                         	<div class="list_row">
-                            	<img src="/imgs/ad/list6_03.jpg" border="0"> 
+                            	<img src="../imgs/ad/list6_03.jpg" border="0"> 
                                 <div class="text_info">
                                	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
-                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="/imgs/next_icon_81.png" border="0"></p>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
                                 </div>
                             </div>
                         </div>
@@ -108,26 +161,26 @@
                         	<div class="list_row">
                                 <div class="text_info">
                                	  <h1>Mercedes-Benz Taiwan 車款展示</h1>
-                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="/imgs/next_icon_81.png" border="0"></p>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
                                 </div>
-                                <img src="/imgs/ad/list2_107.jpg" border="0"> 
+                                <img src="../imgs/ad/list2_107.jpg" border="0"> 
                             </div>
                         </div>
                     	<div class="contant">
                         	<div class="list_row">
-                            	<img src="/imgs/ad/list1_100.jpg" border="0"> 
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
                                 <div class="text_info">
                                	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
-                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="/imgs/next_icon_81.png" border="0"></p>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
                                 </div>
                             </div>
                         </div>
                     	<div class="contant">
                         	<div class="list_row">
-                            	<img src="/imgs/ad/list1_100.jpg" border="0"> 
+                            	<img src="../imgs/ad/list1_100.jpg" border="0"> 
                                 <div class="text_info">
                                	  <h1>挑戰高性能 Lexus RC350 F Sport 11-22</h1>
-                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="/imgs/next_icon_81.png" border="0"></p>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
                                 </div>
                             </div>
                         </div>
@@ -135,33 +188,164 @@
                        	  <div class="list_row">
                             <div class="text_info">
                                	  <h1>Mercedes-Benz Taiwan 車款展示</h1>
-                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="/imgs/next_icon_81.png" border="0"></p>
+                               	  <p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高... <img src="../imgs/next_icon_81.png" border="0"></p>
                             </div>
-                              <img src="/imgs/ad/list4_115.jpg" border="0"> 
+                              <img src="../imgs/ad/list4_115.jpg" border="0"> 
                           </div>
                         </div>
                     </div>
                 </div>
             	<div class="R_right">
-                	<div class="R_ad"><img src="/imgs/ad/ad3_32.jpg" border="0"></div>
-                    <div class="R_block">
-                      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2F%25E8%25BB%258A%25E8%25A8%258A%25E7%25B6%25B2%2F130975221547&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:290px;" allowTransparency="true"></iframe>                    
-                  	</div> 
-                	<div class="R_ad"><img src="/imgs/ad/ad4_113.jpg" border="0"></div>
+                	<div class="R_ad"><img src="../imgs/ad/ad3_32.jpg" border="0"></div>
                     <div class="R_block">
                     	<div class="title">
-                          <h1>11月銷售排行</h1>
-                            <p>Top Sale</p>
+                          <h1>依廠牌及車型找車</h1>
+                            <p>Search Cars</p>
        		  			</div>
-          				<div class="content ranking">
-                        	<ol>
-                            	<li><span>TOYOTA ALTIS</span><span class="car_num">3869輛</span></li>
-                            	<li><span>Toyota YARIS</span><span class="car_num">1638輛</span></li>
-                            	<li><span>挑戰高性能 Lexus RC350 F Sport</span><span class="car_num">11-22</span></li>
-                            	<li><span>Toyota RAV4</span><span class="car_num">1533輛</span></li>
-                            	<li><span>Toyota Wish</span><span class="car_num">1286輛</span></li>
-                            	<li><span>NISSAN TIIDA</span><span class="car_num">1060輛</span></li>
-                            </ol>
+                        <div class="content select_pd">
+                        	<div class="select_block clearfix">
+                                <span class="select_txt">選擇廠牌</span>
+                                <div id="select_menu" class="clearfix">
+                                    <select id="select1">
+                                        <option selected> B </option>
+                                        <option>A</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                    </select>
+                                </div><!-- select_menu -->
+							</div>
+                            <div class="select_block clearfix">
+                                <span class="select_txt">選擇車型</span>
+                                <div id="select_menu" class="clearfix">
+                                    <select id="select2">
+                                        <option selected> B </option>
+                                        <option>A</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                    </select>
+                                </div><!-- select_menu -->
+							</div>
+                        </div>
+                        <a href="#" class="icon_search">搜尋 ></a>
+                    </div>
+                    <div class="R_block">
+                    	<div class="title">
+                          <h1>依條件找車</h1>
+                            <p>Search Cars</p>
+       		  			</div>
+                        <div class="content select_pd">
+                        	<div class="select_block clearfix">
+                                <span class="select_txt">車種</span>
+                                <div id="select_menu" class="clearfix">
+                                    <select id="select3">
+                                        <option selected> 不限 </option>
+                                        <option>A</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                    </select>
+                                </div><!-- select_menu -->
+							</div>
+                            <div class="select_block clearfix">
+                                <span class="select_txt">售價</span>
+                                <div id="select_menu" class="clearfix">
+                                    <select id="select4">
+                                        <option selected> 不限 </option>
+                                        <option>A</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                    </select>
+                                </div><!-- select_menu -->
+							</div>
+                            <div class="select_block clearfix">
+                                <span class="select_txt">燃料類別</span>
+                                <div id="select_menu" class="clearfix">
+                                    <select id="select5">
+                                        <option selected> 不限 </option>
+                                        <option>A</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                    </select>
+                                </div><!-- select_menu -->
+							</div>
+                            <div class="select_block clearfix">
+                                <span class="select_txt">排氣量</span>
+                                <div id="select_menu" class="clearfix">
+                                    <select id="select6">
+                                        <option selected> 不限 </option>
+                                            <option>A</option>
+                                            <option>C</option>
+                                            <option>D</option>
+                                    </select>
+                                </div><!-- select_menu -->
+							</div>
+                            <div class="select_block clearfix">
+                                <span class="select_txt">座位數</span>
+                                <div id="select_menu" class="clearfix">
+                                    <select id="select7">
+                                        <option selected> 不限 </option>
+                                        <option>A</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                    </select>
+                                </div><!-- select_menu -->
+							</div>
+                            <div class="select_block clearfix">
+                                <span class="select_txt">平均油耗</span>
+                                <div id="select_menu" class="clearfix">
+                                    <select id="select8">
+                                        <option selected> 不限 </option>
+                                        <option>A</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                    </select>
+                                </div><!-- select_menu -->
+							</div>
+                        </div>
+                        <a href="#" class="icon_search">搜尋 ></a>
+                    </div>
+                    <div class="R_block">
+                        <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2F%25E8%25BB%258A%25E8%25A8%258A%25E7%25B6%25B2%2F130975221547&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:290px;" allowTransparency="true"></iframe>                    
+                  	</div> 
+                	<div class="R_ad"><img src="../imgs/ad/ad4_113.jpg" border="0"></div>
+                    <div class="R_block">
+                    	<div class="navR-tabs title">
+                        	<ol class="clearfix">
+                        		<li class="active"><a href="#top_sale" aria-controls="top_sale" role="tab" data-toggle="tab">11月銷售排行</a></li>
+                        		<li><a href="#year_sale" aria-controls="year_sale" role="tab" data-toggle="tab">2015暢銷榜</a></li>
+                        		<li><a href="#info" aria-controls="info" role="tab" data-toggle="tab">不可不知</a></li>
+                        	</ol>
+       		  			</div>
+          				<div class="tab-contentR content ranking">
+                        	<div class="tab-pane active" id="top_sale">
+                                <ol>
+                                    <li><span>TOYOTA ALTIS</span><span class="car_num">3869輛</span></li>
+                                    <li><span>Toyota YARIS</span><span class="car_num">1638輛</span></li>
+                                    <li><span>挑戰高性能 Lexus RC350 F Sport</span><span class="car_num">11-22</span></li>
+                                    <li><span>Toyota RAV4</span><span class="car_num">1533輛</span></li>
+                                    <li><span>Toyota Wish</span><span class="car_num">1286輛</span></li>
+                                    <li><span>NISSAN TIIDA</span><span class="car_num">1060輛</span></li>
+                                </ol>
+                            </div>
+                        	<div class="tab-pane" id="year_sale">
+                                <ol>
+                                    <li><span>TOYOTA ALTIS</span><span class="car_num">3869輛</span></li>
+                                    <li><span>Toyota YARIS</span><span class="car_num">1638輛</span></li>
+                                    <li><span>挑戰高性能 Lexus RC350 F Sport</span><span class="car_num">11-22</span></li>
+                                    <li><span>Toyota RAV4</span><span class="car_num">1533輛</span></li>
+                                    <li><span>Toyota Wish</span><span class="car_num">1286輛</span></li>
+                                    <li><span>NISSAN TIIDA</span><span class="car_num">1060輛</span></li>
+                                </ol>
+                            </div>
+                        	<div class="tab-pane" id="info">
+                                <ol>
+                                    <li><span>TOYOTA ALTIS</span></li>
+                                    <li><span>Toyota YARIS</span></li>
+                                    <li><span>挑戰高性能 Lexus RC350 F Sport</span></li>
+                                    <li><span>Toyota RAV4</span></li>
+                                    <li><span>Toyota Wish</span></li>
+                                    <li><span>NISSAN TIIDA</span></li>
+                                </ol>
+                            </div>
                         </div>
                     </div> 
                     <div class="R_block">
@@ -170,33 +354,34 @@
                             <p>Top Sale</p>
        		  			</div>
           				<div class="content ranking">
-                        	<ol>
-                            	<li><span>TOYOTA ALTIS</span><span class="car_num">3869輛</span></li>
-                            	<li><span>Toyota YARIS</span><span class="car_num">1638輛</span></li>
-                            	<li><span>挑戰高性能 Lexus RC350 F Sport</span><span class="car_num">11-22</span></li>
-                            	<li><span>Toyota RAV4</span><span class="car_num">1533輛</span></li>
-                            	<li><span>Toyota Wish</span><span class="car_num">1286輛</span></li>
-                            	<li><span>NISSAN TIIDA</span><span class="car_num">1060輛</span></li>
+                            <ol>
+                                <li><span>TOYOTA ALTIS</span><span class="car_num">3869輛</span></li>
+                                <li><span>Toyota YARIS</span><span class="car_num">1638輛</span></li>
+                                <li><span>挑戰高性能 Lexus RC350 F Sport</span><span class="car_num">11-22</span></li>
+                                <li><span>Toyota RAV4</span><span class="car_num">1533輛</span></li>
+                                <li><span>Toyota Wish</span><span class="car_num">1286輛</span></li>
+                                <li><span>NISSAN TIIDA</span><span class="car_num">1060輛</span></li>
                             </ol>
                         </div>
                     </div> 
-                	<div class="R_ad"><img src="/imgs/ad/ad5_120.jpg" border="0"></div>
+                	<div class="R_ad"><img src="../imgs/ad/ad5_120.jpg" border="0"></div>
                 	<div class="R_ad icon_share">
-                    	<a href="#"><img src="/imgs/fb_icon_123.png" border="0"></a>
-                    	<a href="#"><img src="/imgs/g_icon_123_125.png" border="0"></a>
-                    	<a href="#"><img src="/imgs/3_icon_127.png" border="0"></a>
-                    	<a href="#"><img src="/imgs/carma_icon_129.png" border="0"></a>
-                    	<a href="#"><img src="/imgs/in_icon_131.png" border="0"></a>
-                    	<a href="#"><img src="/imgs/wifi_icon_133.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/fb_icon_123.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/g_icon_123_125.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/3_icon_127.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/carma_icon_129.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/in_icon_131.png" border="0"></a>
+                    	<a href="#"><img src="../imgs/wifi_icon_133.png" border="0"></a>
                     </div>
-              </div>
+                    <div class="footer">
+                        © Copyright 2015 - www.carnews.com - All rights reserved
+                        <br>台灣寶路多股份有限公司所有資料未經許可不得轉載  
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="footer">
-    	© Copyright 2013 - www.carnews.com - All rights reserved
-        <br>台灣寶路多股份有限公司所有資料未經許可不得轉載  
-    </div>
+    
 </div>
 
 </body>

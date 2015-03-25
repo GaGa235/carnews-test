@@ -1,0 +1,541 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Goo 車訊網</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script src="../js/jquery.js"></script>
+<script src="../js/superfish.js"></script>
+<script type="text/javascript" src="../js/jquery.jgd.dropdown.min.js"></script>
+<script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript" src="../source/helpers/jquery.fancybox-media.js?v=1.0.6"></script><!-- Add Media helper -->
+<script type="text/javascript">
+    jQuery("document").ready(function($){
+        var nav = $('#page_list_title');
+        
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1130) {
+                nav.addClass("f-nav");
+            } else {
+                nav.removeClass("f-nav");
+            }
+        });
+
+        var window_height = $(window).height(); 
+        var cont_left_fixed = $('.cont_left');
+        
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > window_height) {
+                cont_left_fixed.addClass("top_adj");
+            } else {
+                cont_left_fixed.removeClass("top_adj");
+            }
+        });
+
+        /*
+             *  Simple image gallery. Uses default settings
+             */
+
+            $('.fancybox').fancybox();
+
+            /*
+             *  Different effects
+             */
+
+            // Change title type, overlay closing speed
+            $(".fancybox-effects-a").fancybox({
+                helpers: {
+                    title : {
+                        type : 'outside'
+                    },
+                    overlay : {
+                        speedOut : 0
+                    }
+                }
+            });
+
+            // Disable opening and closing animations, change title type
+            $(".fancybox-effects-b").fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                helpers : {
+                    title : {
+                        type : 'over'
+                    }
+                }
+            });
+
+            // Set custom style, close if clicked, change title type and overlay color
+            $(".fancybox-effects-c").fancybox({
+                wrapCSS    : 'fancybox-custom',
+                closeClick : true,
+
+                openEffect : 'none',
+
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    overlay : {
+                        css : {
+                            'background' : 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
+
+            // Remove padding, set opening and closing animations, close if clicked and disable overlay
+            $(".fancybox-effects-d").fancybox({
+                padding: 0,
+
+                openEffect : 'elastic',
+                openSpeed  : 150,
+
+                closeEffect : 'elastic',
+                closeSpeed  : 150,
+
+                closeClick : true,
+
+                helpers : {
+                    overlay : null
+                }
+            });
+
+            /*
+             *  Button helper. Disable animations, hide close button, change title type and content
+             */
+
+            $('.fancybox-buttons').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                prevEffect : 'none',
+                nextEffect : 'none',
+
+                closeBtn  : false,
+
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    buttons : {}
+                },
+
+                afterLoad : function() {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+
+
+            /*
+             *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+             */
+
+            $('.fancybox-thumbs').fancybox({
+
+                prevEffect : 'none',
+                nextEffect : 'none',
+
+                closeBtn  : false,
+                arrows    : false,
+                nextClick : true,
+
+                helpers : {
+                    thumbs : {
+                        width  : 50,
+                        height : 50
+                    }
+                }
+            });
+
+            /*
+             *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+            */
+            $('.fancybox-media')
+                .attr('rel', 'media-gallery')
+                .fancybox({
+                    openEffect : 'none',
+                    closeEffect : 'none',
+                    prevEffect : 'none',
+                    nextEffect : 'none',
+
+                    arrows : false,
+                    helpers : {
+                        media : {},
+                        buttons : {}
+                    }
+                });
+
+            /*
+             *  Open manually
+             */
+
+            $("#fancybox-manual-a").click(function() {
+                $.fancybox.open('1_b.jpg');
+            });
+
+            $("#fancybox-manual-b").click(function() {
+                $.fancybox.open({
+                    href : 'iframe.html',
+                    type : 'iframe',
+                    padding : 5
+                });
+            });
+
+            $("#fancybox-manual-c").click(function() {
+                $.fancybox.open([
+                    {
+                        href : '1_b.jpg',
+                        title : 'My title'
+                    }, {
+                        href : '2_b.jpg',
+                        title : '2nd title'
+                    }, {
+                        href : '3_b.jpg'
+                    }
+                ], {
+                    helpers : {
+                        thumbs : {
+                            width: 75,
+                            height: 50
+                        }
+                    }
+                });
+            });
+
+      
+    });
+</script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">
+    	<div class="headerwd clearfix">
+            <div class="logo"><img src="../imgs/logo/logo_movie.png" border="0"></div>
+            <div class="login">
+                <a href="#" class="btn_login"></a>
+                <a href="#" class="btn_fb_login"></a>
+            </div>
+            <div class="search">
+            <div id="select_search" class="clearfix">
+                <select id="select" class="search_select">
+                    <option selected> 全站搜尋 </option>
+                        <option>新車搜尋</option>
+                        <option>圖片搜尋</option>
+                        <option>影片搜尋</option>
+                        <option>試車搜尋</option>
+                        <option>改裝搜尋</option>
+                </select>
+                <input type="text" class="search_txt" value="">
+                <input type="button" class="search_input" value="送出">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_block clearfix">
+    	<div class="cont_left">
+        	<ol>
+                <li>
+                    <a href="/"><span class="menu_icon icon_index"></span> <span class="menu_txt txt_index">回首頁</span></a>
+                </li>
+                <li>
+                    <a href="/news"><span class="menu_icon icon_new"></span> <span class="menu_txt txt_new">GOO新車</span></a>
+                    <ul class="sub_sidemenu">
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">頭條</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">熱門點閱</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">新車速報</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">促銷</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">賽車</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">汽車百貨</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">俱樂部</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">時尚生活</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">專題企畫</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">二手車</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">機車特區</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/refit"><span class="menu_icon icon_transform"></span> <span class="menu_txt txt_transform">GOO改裝</span></a>
+                </li>
+                <li>
+                    <a href="/pic"><span class="menu_icon icon_pic"></span> <span class="menu_txt txt_pic">GOO圖庫</span></a>
+                </li>
+                <li>
+                    <a href="/movie"><span class="menu_icon icon_movie"></span> <span class="menu_txt txt_movie">GOO影音</span></a>
+                    <ul>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">新車發表</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">試駕/賽車</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">廣 告</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">車 展 </span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="menu_icon icon_discuss"></span> <span class="menu_txt txt_discuss">GOO討論</span></a>
+                </li>
+                <li>
+                    <a href="/option"><span class="menu_icon icon_play"></span> <span class="menu_txt txt_play">OPTION盃</span></a>
+                    <ul class="sub_sidemenu">
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">頭條新聞</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">比賽結果</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">年度賽程</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">售票資訊</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">參賽陣容</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">影音圖庫</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">OP盃源起</span></a></li>
+                        <li><a href="#"><span class="menu_icon "></span> <span class="menu_txt_sub txt_play_sub">贊助廠商</span></a></li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="menu_ad">
+       	    	<a href="#"><img src="../imgs/ad/ad1_44.jpg" border="0"></a>
+            </div>
+        </div>
+    	<div class="cont_right">
+            <p class="text_title">
+            	<a href="#">文字三頭標之1</a>
+            	<a href="#">文字三頭標之2</a>
+            	<a href="#">文字三頭標之3</a>
+            </p>
+            <div class="brand_over_view">
+                <div class="R_block title">
+                    <h1>品牌總覽</h1>
+                    <p>Brand Overview</p>
+                </div>
+                <div class="R_block clearfix">
+                    <div id="select_menu" class="clearfix">
+                        <select id="select1">
+                            <option selected> B </option>
+                                <option>A</option>
+                                <option>C</option>
+                                <option>D</option>
+                        </select>
+                    </div><!-- select_menu -->
+                </div>
+                <div class="R_block clearfix">
+                    <div id="select_menu" class="clearfix">
+                        <select id="select2">
+                            <option selected> BMW </option>
+                                <option>A</option>
+                                <option>C</option>
+                                <option>D</option>
+                        </select>
+                    </div><!-- select_menu -->
+                </div>
+                <div class="R_block clearfix">
+                    <div id="select_menu" class="clearfix">
+                        <select id="select3">
+                            <option selected> BMW X5 </option>
+                                <option>A</option>
+                                <option>C</option>
+                                <option>D</option>
+                        </select>
+                    </div><!-- select_menu -->
+                </div>
+            </div>
+            <div class="video_block clearfix">
+            	<div class="video">
+                	<iframe width="640" height="508" src="https://www.youtube.com/embed/TD8HO766ICA" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video_info"> 
+                	<h1>Mercedes-Benz Taiwan 車款展示</h1>
+                	<p>對於汽車的「熱情」，讓Lexus造出了RC這款性能與操控樂趣兼具的Coupe雙門跑車，也讓他們填補了長久以來在「性能」市場上的這塊空缺，更能向那些盤據市場已久的歐系高...</p>
+					<div class="video_icon">
+                        <a class="icon-shar icon-f" href="#"></a>
+                        <a class="icon-shar icon-t" href="#"></a>
+                        <a class="icon-shar icon-g" href="#"></a>
+                        <a class="icon-shar icon-s" href="#"></a>
+                        <a class="icon-shar icon-r" href="#"></a>
+                    </div>
+                    <div class="video_ad">
+                        <img src="../imgs/ad/ad3_32.jpg" border="0">
+                    </div>
+                </div>
+            </div>
+            <div class="picture_contant clearfix">
+                <div id="newcarsreleased">
+                    <div class="video_title">
+                        <div class="R_block">
+                            <h1>新車發表</h1>
+                            <p>New cars released</p>
+                        </div>
+                    </div>
+                    <div class="video_box">
+                    	<ol class="clearfix">
+                    		<li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_01.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_02.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_03.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_04.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_05.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_01.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_02.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_03.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_04.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_05.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_01.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_02.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_03.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_04.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_05.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_01.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_02.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_03.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_04.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_05.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_01.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_02.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_03.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_04.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+                            <li class="pic_block">
+                                <a class="pic_img fancybox-media" href="https://www.youtube.com/watch?v=TD8HO766ICA"><img src="../imgs/movie_05.png" border="0"></a>
+                                <div class="pic_info">
+                                    <span>對於汽車的「熱情...</span>
+                                </div>
+                            </li>
+    					</ol>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer_block">
+        <div class="R_ad icon_share">
+            <a href="#"><img src="../imgs/fb_icon_123.png" border="0"></a>
+            <a href="#"><img src="../imgs/g_icon_123_125.png" border="0"></a>
+            <a href="#"><img src="../imgs/3_icon_127.png" border="0"></a>
+            <a href="#"><img src="../imgs/carma_icon_129.png" border="0"></a>
+            <a href="#"><img src="../imgs/in_icon_131.png" border="0"></a>
+            <a href="#"><img src="../imgs/wifi_icon_133.png" border="0"></a>
+        </div>
+        <div class="footer">
+            © Copyright 2015 - www.carnews.com - All rights reserved
+            <br>台灣寶路多股份有限公司所有資料未經許可不得轉載  
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
